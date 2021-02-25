@@ -1,0 +1,68 @@
+﻿body {
+    background-color: lightgreen;
+    font-style:italic;
+    color: darkorange;
+   font-size: 1.2em;
+}
+
+img {
+    display: block;
+    margin:auto;
+    border: 10px dashed;
+    border-color: darkgreen;
+    border-radius:8px;
+
+    animatio
+}
+
+div {
+    border: 6px solid;
+    border-color: darkgreen;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 10px 3px;
+}
+
+#etel {
+    list-style-type: circle;
+    background-color: brown;
+    width: 100px;
+    border-radius: 10px;
+}
+
+#konyv {
+    list-style-type: upper-roman;
+    background-color: darkmagenta;
+    width: 250px;
+    border-radius: 15px;
+}
+
+#google{
+
+    text-align:center;
+    margin:auto;
+    font-size: 30px;
+    border:none;
+}
+
+a {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: cyan;
+    color: darkorange;
+}
+
+a:hover{
+    background-color: deeppink;
+    color:cornsilk;
+}
+
+h1{
+    text-align:center;
+}
+
+h2{
+
+    color: blueviolet;
+    text-shadow: 3px 5px 20px fuchsia;
+}
