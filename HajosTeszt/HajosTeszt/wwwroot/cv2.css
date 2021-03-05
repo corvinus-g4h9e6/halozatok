@@ -1,0 +1,151 @@
+﻿
+* {
+    box-sizing: border-box;
+       
+}
+body {
+    background-color: forestgreen;
+    font-style: italic;
+    color: darkorange;
+    font-size: 1.2em;
+    margin: auto;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 10px dashed;
+    border-color: lightgreen;
+    border-radius: 8px;
+
+    margin-top:30px;
+}
+#header {
+    border: 6px solid;
+    border-color: lightgreen;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 10px 3px;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bemutatkozas {
+    border: 6px solid;
+    border-color: lightgreen;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 10px 3px;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#foemlos {
+    border: 6px solid;
+    border-color: lightgreen;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 10px 3px;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#felsorolasok {
+    display: flex;
+    flex-direction: column;
+    border: 6px solid;
+    border-color: lightgreen;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 10px 3px;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#felsorolasok div{
+
+    flex: 1 1 auto;
+    
+
+}
+
+#etelek {
+    list-style-type: circle;
+    background-color: brown;
+    width: 100px;
+    border-radius: 10px;
+    padding-right: 90px;
+    
+}
+
+#konyvek {
+    list-style-type: upper-roman;
+    background-color: darkmagenta;
+    width: 250px;
+    border-radius: 15px;
+}
+
+a {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: cyan;
+    color: darkorange;
+}
+
+a:hover {
+    background-color: deeppink;
+    color: cornsilk;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: fuchsia;
+    text-shadow: 3px 5px 20px fuchsia;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    #foemlos{
+        display:flex;
+        order:3
+    }
+
+    #szoveg{
+        flex: 1 1 60%;
+    }
+
+    #kep {
+        flex: 1 1 40%;
+    }
+
+
+    #felsorolasok {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+  
