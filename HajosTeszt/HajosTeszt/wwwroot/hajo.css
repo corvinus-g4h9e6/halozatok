@@ -14,27 +14,31 @@ div {
 }
 
 #kérdés_szöveg {
-    border: 3px solid lightcoral;
+    border: 3px solid lightseagreen;
+    border-radius: 4px;
 }
 
 #középső {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    border: 3px solid lightcoral;
+    border: 3px solid lightseagreen;
+    border-radius: 4px;
 }
 
 #válaszok {
     flex-grow: 1;
     flex-shrink: 1;
-    border: 3px solid lightcoral;
+    border: 3px solid lightseagreen;
+    border-radius: 4px;
 }
 
 #vezérlő {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 3px solid lightcoral;
+    border: 3px solid lightseagreen;
+    border-radius: 4px;
 }
 
 #kép {
@@ -54,4 +58,13 @@ div {
 }
 
 .kerdes {
+}
+
+.jo{
+
+    background-color:lightgreen;
+}
+
+.rossz {
+    background-color: lightcoral;
 }

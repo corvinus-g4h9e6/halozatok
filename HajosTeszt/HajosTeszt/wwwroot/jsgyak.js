@@ -3,7 +3,7 @@ window.onload = function () {
 
 
 
-    let hova = document.getElementById("ide")
+    let hova = document.getElementById("ide");
     let sor = document.createElement("div");
     sor.classList.add("sorban");
     hova.appendChild(sor);
