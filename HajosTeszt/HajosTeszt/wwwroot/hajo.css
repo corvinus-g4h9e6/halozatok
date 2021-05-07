@@ -53,8 +53,7 @@ div {
 }
 
 .kattintható:hover {
-    background-color: fuchsia;
-    color: white;
+    border: 3px solid blue;
 }
 
 .kerdes {
@@ -62,7 +61,7 @@ div {
 
 .jo{
 
-    background-color:lightgreen;
+    background-color: lightgreen;
 }
 
 .rossz {
