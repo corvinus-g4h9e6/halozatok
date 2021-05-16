@@ -18,6 +18,7 @@
 
     <script>
         var viccekszama;
+        window.onload = "vicceklistazasa()";
 
         document.getElementById("addButton").addEventListener("click", () => {
 
@@ -27,7 +28,7 @@
             }
 
 
-            fetch("api/jokes",
+            fetch(`api/jokes`,
                 {
                     
                     method: 'POST',
@@ -48,16 +49,22 @@
 
         });
 
-       /* fetch("api/jokes/count").then(result => result.text()).then(n => { viccekszama = parseInt(n) })
-        
+        function vicceklistazasa() {
 
-        for (var i = 1; i <= viccekszama; i++) {
-            let hova = document.getElementById("jokeList");
-            let vicc = document.createElement("p");
-            vicc.innerText = fetch("api/{i}");
-            hova.appendChild(vicc);
+            fetch(`api/jokes/count`).then(result => result.text()).then(n => { viccekszama = parseInt(n) })
+
+
+            for (var i = 1; i <= viccekszama; i++) {
+                let hova = document.getElementById("jokeList");
+                let vicc = document.createElement("p");
+                vicc.innerText = fetch(`api/jokes/{i}`);
+                hova.appendChild(vicc);
+            }
+
         }
-       */
+
+        
+       
 
        
     </script>

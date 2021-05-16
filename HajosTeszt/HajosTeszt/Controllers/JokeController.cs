@@ -58,7 +58,7 @@ namespace HajosTeszt.Controllers
         }
 
 
-        /*[HttpGet]
+        [HttpGet]
         [Route("count")]
         public int ViccekkSzama()
         {
@@ -66,6 +66,6 @@ namespace HajosTeszt.Controllers
             int viccszam = context.Jokes.Count();
 
             return viccszam;
-        }*/
+        }
     }
 }
