@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="beadando.css" rel="stylesheet" />
+    <title>Tanuló adatbázis</title>
+</head>
+<body>
+    
+    <h2>Beadandó feladat --CRUDE műveletek megvalósítása tanulók adatatit tartalmazó adattáblával--</h2>
+    <h3>Az Azurera feltöltött verzió funkciói nem működnek, mivel lokális adatbázist használtam, ezek bemutatására videót töltöttem fel a leadási felülethez.</h3>
+    <form id="oldalform">
+        <h3>Tanulók adatai:</h3>
+        <p id="tanuloLista"></p>
+        <div id="tanuloHozzaadas">
+            <h3>Új tanuló:</h3>
+            <p><input id="Nev" type="text" placeholder="Tanuló neve:" /></p>
+            <!--<p><input id="Szul" type="text" placeholder="Tanuló születési dátuma:" /></p>-->
+            <p><input id="Email" type="text" placeholder="Tanuló email címe:" /></p>
+
+            <button id="UjTanulo">Új tanuló felvétele</button>
+            <h3>Tanuló törlése:</h3>
+            <p><input id="torlendo" type="number" placeholder="Tanuló sorszáma:" /> </p>
+            <p><button id="tanuloTorles">Tanuló törlése</button></p>
+            <p><button id="frissites" onclick="TanuloListazas()">Frissítés</button></p>
+
+        </div>
+    </form>
+
+    <footer>
+
+        <p>Kiss Bence Barnabás - számítógép-hálózatok</p>
+        <p>G4H9E6</p>
+        <p>Fel nem használt API végpontok: Put végpont és az id alapján tanulót megjelenítő végpont</p>
+
+    </footer>
+
+<script>
+
+    //----A születési dátumra vonatkozó kódok ki lettek kommentelve, mert nem akarta megjeleníteni azt a böngésző megfelelően, ettől még az adatbázisba üres értékként bekerülnek, de nem kerülnek megjelenítésre a weblapon
+
+    function TanuloListazas() {
+
+        fetch('api/tanulok')
+            .then(result => {
+
+                if (!result.ok) {
+                    console.error(`Hibás letöltés: ${result.status}`);
+                    return null;
+                }
+                else {
+                    return result.json();
+
+                }
+            })
+            .then(data => {
+                for (var i = 0; i < data.length; i++) {
+                    document.getElementById("tanuloLista").innerHTML += data[i].tanuloSk + " | " + data[i].nev + " | " + /*data[i].szulDatum + " | " +*/ data[i].email + "<br/>";
+                }
+            });
+
+    }
+
+    function torles(id) {
+        fetch('api/tanulok' + "/" + id, {
+            method: 'DELETE'
+        }).then(() => {
+            console.log('törölve');
+        }).catch(err => {
+            console.error(err)
+        });
+    }
+
+    window.onload = () => {
+        TanuloListazas();
+    }
+
+    document.getElementById("UjTanulo").addEventListener("click", () => {
+
+        let data = {
+            
+            Nev: document.getElementById("Nev").value,
+            //Szul_Datum: document.getElementById("Szul").value,
+            Email: document.getElementById("Email").value
+            
+        }
+        
+
+        fetch('api/tanulok',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }
+        ).then(x => {
+            if (x.ok) {
+                alert("Siker");
+
+            }
+            else {
+                alert("Kudarc");
+            }
+        });
+
+        TanuloListazas();
+
+    });
+
+    document.getElementById("tanuloTorles").addEventListener("click", () => {
+
+        var torlendotanulo = document.getElementById("torlendo").value;
+
+        torles(torlendotanulo);
+
+       
+        TanuloListazas();
+    });
+
+   
+
+    
+</script>
+
+
+</body>
+</html>

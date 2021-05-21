@@ -1,0 +1,107 @@
+﻿body {
+    background-color: moccasin;
+    color: brown;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 100%;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+h2{
+
+    margin:8px;
+}
+h3{
+    margin-left:8px;
+}
+
+#UjTanulo{
+
+    background-color:coral;
+    color:brown;
+    border-color:brown;
+    border-style:solid;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+#UjTanulo:hover {
+        background-color:antiquewhite;
+        color: brown;
+        border-color: brown;
+        
+
+        font-size: 1.25em;
+}
+
+#Nev,#Szul,#Email{
+
+
+    background-color:burlywood;
+    border-color:brown;
+    border-style:solid;
+    border-radius:3px;
+    font-size:1.1em;
+}
+
+#oldalform {
+    padding-left: 30px;
+}
+
+#tanuloHozzaadas{
+    text-align:center;
+}
+
+footer {
+    background-color: darksalmon;
+    margin: 0px;
+    text-align: center;
+    position:fixed;
+    bottom: 0;
+    right:0px;
+    left:0px;
+}
+
+#torlendo {
+    background-color: burlywood;
+    border-color: brown;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 1.1em;
+}
+
+#tanuloTorles {
+    background-color: coral;
+    color: brown;
+    border-color: brown;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+#tanuloTorles:hover {
+    background-color: antiquewhite;
+    color: brown;
+    border-color: brown;
+    font-size: 1.25em;
+}
+
+#frissites {
+    background-color: coral;
+    color: brown;
+    border-color: brown;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+    #frissites:hover {
+        background-color: antiquewhite;
+        color: brown;
+        border-color: brown;
+        font-size: 1.25em;
+    }
